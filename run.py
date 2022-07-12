@@ -7,19 +7,37 @@ def clean_clipboard_text():
     
     text = pyperclip.paste()
     
-    text.replace('\r\n', ' ')
+    text = text.replace('\r\n', ' ')
     
-    text.replace('(A) ', ';')
-    text.replace('(B) ', ';')
-    text.replace('(C) ', ';')
-    text.replace('(D) ', ';')
-    text.replace('(E) ', ';')
+    text = text.replace(' (A) ', '')
+    text = text.replace(' (B) ', ';')
+    text = text.replace(' (C) ', ';')
+    text = text.replace(' (D) ', ';')
+    text = text.replace(' (E) ', ';')
     
-    text.replace('\r\n(A) ', ';')
-    text.replace('\r\n(B) ', ';')
-    text.replace('\r\n(C) ', ';')
-    text.replace('\r\n(D) ', ';')
-    text.replace('\r\n(E) ', ';')
+    text = text.replace(' (A)', '')
+    text = text.replace(' (B)', ';')
+    text = text.replace(' (C)', ';')
+    text = text.replace(' (D)', ';')
+    text = text.replace(' (E)', ';')
+    
+    text = text.replace('(A) ', '')
+    text = text.replace('(B) ', ';')
+    text = text.replace('(C) ', ';')
+    text = text.replace('(D) ', ';')
+    text = text.replace('(E) ', ';')
+        
+    text = text.replace('\r\n(A) ', '')
+    text = text.replace('\r\n(B) ', ';')
+    text = text.replace('\r\n(C) ', ';')
+    text = text.replace('\r\n(D) ', ';')
+    text = text.replace('\r\n(E) ', ';')
+    
+    text = text.replace('(A)', '')
+    text = text.replace('(B)', ';')
+    text = text.replace('(C)', ';')
+    text = text.replace('(D)', ';')
+    text = text.replace('(E)', ';')
 
     pyperclip.copy(text)
 
